@@ -119,6 +119,7 @@ public class SwiftyOnboard: UIView, UIScrollViewDelegate {
         self.containerView.frame = viewFrame
         containerView.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedPage))
+        tap.cancelsTouchesInView = false
         containerView.addGestureRecognizer(tap)
         self.addSubview(containerView)
     }
